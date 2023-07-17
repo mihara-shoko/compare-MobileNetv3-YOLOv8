@@ -1,0 +1,22 @@
+[property]
+gpu-id=0
+net-scale-factor=1
+model-color-format=0
+
+model-engine-file=models/mobilenetv3_gender.plan
+
+force-implicit-batch-dim=1
+batch-size=1
+network-mode=1 # Integer 0: FP32 1: INT8 2: FP16
+
+interval=0
+gie-unique-id=2
+process-mode=2
+network-type=1
+
+maintain-aspect-ratio=0
+
+parse-classifier-func-name=NvDsInferParseCustomMNv3Gender
+custom-lib-path=parser/libnvds_infercustomparser_mnv3_gender.so
+
+

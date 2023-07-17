@@ -1,0 +1,23 @@
+[property]
+gpu-id=0
+net-scale-factor=0.0039215697906911373
+model-color-format=0
+
+#model-engine-file=models/yolov8n_cls_gender.plan
+model-engine-file=models/yolov8s_cls_gender.plan
+
+force-implicit-batch-dim=1
+batch-size=1
+network-mode=1 # Integer 0: FP32 1: INT8 2: FP16
+
+interval=0
+gie-unique-id=1
+process-mode=1
+network-type=1
+
+maintain-aspect-ratio=1
+
+parse-classifier-func-name=NvDsInferParseCustomYolov8Cls
+custom-lib-path=parser/libnvds_infercustomparser_yolov8_cls.so
+
+
